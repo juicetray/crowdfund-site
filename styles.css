@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Commissioner;
+    font-size: 16px;
+}
+
+.hero-image {
+    background-image: url("./assets/images/image-hero-desktop.jpg");
+    aspect-ratio: 16 / 5; /* roughly 400px height at wide screens */
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* Needed to position the navbar */
+    position: relative;
+  }
+
+a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 2rem 0rem;
+}
+
+.nav-left {
+    font-weight: 700;
+    margin-left: 9rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2rem;
+    margin-right: 7rem;
+}
+
+.project-intro {
+    max-width: 730px;
+    width: 90%;
+    margin: -80px auto 0 auto;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    position: relative;
+    z-index: 10;
+    align-items: center;
+}
+
+
+.heading {
+    color: black;
+    text-align: center;
+    font-weight: 700;
+}
+
+.text {
+    text-align: center;
+    color: hsl(0, 0%, 48%);
+}
+
+.button-group {
+    display: flex;
+    gap: 20rem;
+  }
+
+  .button-left {
+    border-radius: 0.75rem;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    white-space: nowrap;
+    background-color: #3CB3AB;
+    padding: 1rem 2.5rem;
+  }
+
+  .button-right {
+    background-color: hsl(0, 0%, 95%);
+    border: none;
+    border-radius: 1.5rem;
+    color: #7A7A7A;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 0.5rem 3rem;
+  }
+  
