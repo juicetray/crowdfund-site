@@ -7,15 +7,17 @@ body, html {
     font-size: 16px;
 }
 
+body {
+    background-color: #f5f5f5;
+}
+
 .hero-image {
     background-image: url("./assets/images/image-hero-desktop.jpg");
-    aspect-ratio: 16 / 5; /* roughly 400px height at wide screens */
+    aspect-ratio: 16 / 5;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  
-    /* Needed to position the navbar */
     position: relative;
   }
 
@@ -31,9 +33,18 @@ nav {
     padding: 2.5rem 2rem 0rem;
 }
 
+.hamburger {
+    display: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
 .nav-left {
     font-weight: 700;
-    margin-left: 9rem;
+    font-size: 1.7rem;
+    margin-left: 4rem;
 }
 
 .nav-right {
@@ -52,7 +63,21 @@ nav {
     position: relative;
     z-index: 10;
     align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-logo {
+    width: 64px;
+    height: 64px;
+  }
+  
 
 
 .heading {
@@ -72,7 +97,7 @@ nav {
   }
 
   .button-left {
-    border-radius: 0.75rem;
+    border-radius: 999px;
     border: none;
     color: #fff;
     font-weight: 700;
@@ -82,12 +107,317 @@ nav {
   }
 
   .button-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     background-color: hsl(0, 0%, 95%);
     border: none;
-    border-radius: 1.5rem;
+    border-radius: 999px;
     color: #7A7A7A;
     font-weight: 700;
     white-space: nowrap;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    cursor: pointer;
   }
+  
+  .bookmark-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: #2F2F2F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bookmark-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .backer-info {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 2rem;
+    max-width: 730px;
+    width: 90%;
+    margin: 4rem auto 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+
+  .stat {
+    flex: 1;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+  }
+  
+  .stat-label {
+    display: block;
+    font-size: 0.875rem;
+    color: hsl(0, 0%, 48%);
+    margin-top: 0.25rem;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 3rem;
+    background-color: hsl(0, 0%, 90%);
+    margin: 0 2rem;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 999px;
+    transition: width 0.5s ease;
+    width: 0%; /* Initial state */
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 730px;
+    width: 90%;
+    margin: 4rem auto 0 auto;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .about-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: black;
+  }
+  
+  .about-text {
+    color: hsl(0, 0%, 48%);
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  .reward-card {
+    border: 1px solid hsl(0, 0%, 90%);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  }
+  
+  .reward-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  
+  .reward-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+  }
+  
+  .reward-subtitle {
+    font-size: 1rem;
+    color: hsl(176, 50%, 47%);
+    font-weight: 500;
+  }
+  
+  .reward-description {
+    color: hsl(0, 0%, 48%);
+    line-height: 1.7;
+    margin: 0;
+  }
+  
+  .reward-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .reward-left {
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .reward-btn {
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 999px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .reward-btn:hover {
+    background-color: hsl(176, 72%, 28%);
+  }
+
+  .out-of-stock {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  .out-of-stock .reward-btn {
+    background-color: hsl(0, 0%, 80%);
+    color: white;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+
+    .nav-right {
+        display: none;
+        position: fixed;
+        width: 327px;
+        height: 212px;
+        top: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: column;
+        background-color: white;
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        z-index: 999;
+      }
+
+      .nav-right a {
+        color: black;
+      }
+
+      .nav-right.show {
+        display: flex;
+      }
+    
+      .hamburger {
+        display: block;
+      }
+
+    .project-intro,
+    .backer-info,
+    .about {
+      width: 90%;
+      max-width: 327px;
+      margin: 2rem auto 0 auto;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+    }
+  
+    .heading,
+    .about-heading {
+      font-size: 1.125rem;
+      text-align: center;
+    }
+  
+    .text,
+    .about-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .reward-card {
+      max-width: 100%;
+      padding: 1.5rem;
+      gap: 1rem;
+    }
+  
+    .reward-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    .reward-btn {
+      width: 100%;
+    }
+
+    .stats-row {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .divider {
+      display: none;
+    }
+  
+    .button-group {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+  
+    .button-left {
+      flex: 1;
+      height: 3.5rem;
+      padding: 0 1.5rem;
+      font-size: 0.9rem;
+    }
+  
+    .button-right {
+      width: 3.5rem;
+      height: 3.5rem;
+      position: relative;
+      border-radius: 50%;
+      padding: 0;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+  
+    .bookmark-icon-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .bookmark-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+  
+
   
